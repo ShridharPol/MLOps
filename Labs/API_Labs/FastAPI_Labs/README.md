@@ -88,7 +88,7 @@ Returns model metadata and class mapping.
 ## Notes
 
 Decision Trees support predict_proba(), which produces hard probabilities.
-
+The screenshot folder contains the snapshots of the implementation.
 ---
 
 ## Summary
