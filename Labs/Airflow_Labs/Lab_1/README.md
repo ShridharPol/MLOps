@@ -1,3 +1,29 @@
+## My Submission - Lab Modifications
+
+**Branch:** `airflow-lab1`
+**Original Lab:** Airflow Lab 1 — K-Means clustering on credit card dataset
+
+### Changes Made
+
+| | Original Lab | Modified Lab |
+|---|---|---|
+| **File** | `dags/airflow.py` | `dags/airflow_modified.py` |
+| **Dataset** | Credit card CSV (BALANCE, PURCHASES, CREDIT_LIMIT) | Iris dataset (built-in sklearn, no CSV needed) |
+| **Model** | K-Means clustering (k=1 to 49) | DBSCAN (auto-detects number of clusters) |
+| **Clusters** | Fixed range, elbow method | Auto-detected by DBSCAN eps and min_samples |
+| **Extra Task** | None | evaluate_clusters_task with silhouette score |
+
+### How to Run
+
+1. Make sure Docker Desktop is running
+2. Navigate to `Labs/Airflow_Labs/Lab_1`
+3. Run `docker compose up -d`
+4. Go to `http://localhost:8082`
+5. Login with `airflow` / `airflow`
+6. Trigger `Airflow_Lab1` for the original lab
+7. Trigger `Airflow_Lab1_Modified` for the modified version
+
+---
 # Airflow lab
 
 - In order to install Airflow using docker you can watch our [Airflow Lab1 Tutorial Video](https://youtu.be/exFSeGUbn4Q?feature=shared)
