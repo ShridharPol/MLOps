@@ -2,7 +2,7 @@ services:
   model_training:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
       target: model_training
     container_name: model_training
     volumes:
@@ -12,13 +12,13 @@ services:
   serving:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
       target: serving
     container_name: model_serving
     depends_on:
       - model_training
     volumes:
-      - ./model_output:/model_output     # <-- FIXED
+      - ./model_output:/model_output
     ports:
       - "80:80"
     environment:
